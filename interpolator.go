@@ -5,7 +5,8 @@ import (
 	"text/template"
 )
 
-func interpolate(tmpl string, values interface{}) (string, error) {
+// Interpolate interpolates
+func Interpolate(tmpl string, values interface{}) (string, error) {
 	builder := strings.Builder{}
 	parsed, err := template.New("template").Parse(tmpl)
 	if err != nil {
